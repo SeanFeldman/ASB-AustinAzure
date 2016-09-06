@@ -16,7 +16,7 @@ static async Task MainAsync()
 	var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 
 	await CreateEntities(namespaceManager, "myqueue", "mytopic", "mysub1", "mysub2").ConfigureAwait(false);
-	await CreateWireTap(namespaceManager, "mytopic").ConfigureAwait(false);
+	//~ await CreateWireTap(namespaceManager, "mytopic").ConfigureAwait(false);
 	#region What about Auto-forwarding to the input queues
 	// Benefits are:
 	// 1. Native chaining
